@@ -18,7 +18,7 @@ export function callApi({ method = 'get', url, params, data }) {
     baseURL: API_HOST,
     params,
     data,
-    withCredentials: true,
+    withCredentials: true,  // 토큰을 쿠키로 저장하기 위해 준 옵션
   }).then(response => {
     const { resultCode, resultMessage, totalCount } = response.data;
     if (resultCode < 0) {
